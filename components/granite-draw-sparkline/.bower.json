@@ -1,0 +1,39 @@
+{
+  "name": "granite-draw-sparkline",
+  "authors": [
+    "Horacio Gonzalez <horacio.gonzalez@gmail.com>"
+  ],
+  "description": "A webcomponent to hand draw a sparkline on a canvas and get its coordinates",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "lostinbrittany",
+    "canvas"
+  ],
+  "main": "granite-draw-sparkline.html",
+  "license": "MIT",
+  "homepage": "https://github.com/LostInBrittany/granite-led",
+  "ignore": [],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.7.0",
+    "iron-resizable-behavior": "PolymerElements/iron-resizable-behavior#^1.0.5"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.1.6",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.2.3",
+    "paper-styles": "PolymerElements/paper-styles#^1.1.4",
+    "test-fixture": "PolymerElements/test-fixture#^1.1.1",
+    "web-component-tester": "^4.3.0"
+  },
+  "_release": "5997d12296",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "5997d122965e476921849fd1365b22913fecada9"
+  },
+  "_source": "https://github.com/LostInBrittany/granite-draw-sparkline.git",
+  "_target": "master",
+  "_originalSource": "LostInBrittany/granite-draw-sparkline",
+  "_direct": true
+}
