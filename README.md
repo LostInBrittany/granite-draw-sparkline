@@ -1,6 +1,6 @@
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/LostInBrittany/granite-ink)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/LostInBrittany/granite-draw-sparkline)
 
-# granite-ink
+# granite-draw-sparkline
 
 > is a webcomponent to hand draw paths on a canvas and get the paths coordinates
 >
@@ -9,7 +9,7 @@
 
 ## Doc & demo
 
-[https://lostinbrittany.github.io/granite-ink](https://lostinbrittany.github.io/granite-ink)
+[https://lostinbrittany.github.io/granite-draw-sparkline](https://lostinbrittany.github.io/granite-draw-sparkline)
 
 ## Usage example
 
@@ -18,21 +18,21 @@
 <custom-element-demo>
   <template>
     <style>
-      granite-ink {
+      granite-draw-sparkline {
         width:300px;
         height:300px; 
         border: solid 1px grey;
       }
     </style>
     <script src="../webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="granite-ink.html">
+    <link rel="import" href="granite-draw-sparkline.html">
     <next-code-block></next-code-block>
   </template>
 </custom-element-demo>
 ```
 -->
 ```html
-<granite-ink></granite-ink>
+<granite-draw-sparkline></granite-draw-sparkline>
 ```
 
 ## Install
@@ -40,10 +40,10 @@
 Install the component using [Bower](http://bower.io/):
 
 ```sh
-$ bower install LostInBrittany/granite-ink --save
+$ bower install LostInBrittany/granite-draw-sparkline --save
 ```
 
-Or [download as ZIP](https://github.com/LostInBrittany/granite-ink/archive/gh-pages.zip).
+Or [download as ZIP](https://github.com/LostInBrittany/granite-draw-sparkline/archive/gh-pages.zip).
 
 ## Usage
 
@@ -56,14 +56,14 @@ Or [download as ZIP](https://github.com/LostInBrittany/granite-ink/archive/gh-pa
 2. Import Custom Element:
 
     ```html
-    <link rel="import" href="bower_components/granite-ink/granite-ink.html">
+    <link rel="import" href="bower_components/granite-draw-sparkline/granite-draw-sparkline.html">
     ```
 
 3. Start using it!
 
     ```html
-    <granite-ink>
-    </granite-ink>
+    <granite-draw-sparkline>
+    </granite-draw-sparkline>
     ```
 
 
