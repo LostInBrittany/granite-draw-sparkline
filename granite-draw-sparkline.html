@@ -212,7 +212,7 @@ The path data can be obtained via the `path` variable, or using the `changed` ev
         if (!this._isDrawing) {
           return;
         }
-        if (evt.offsetX >= this._position.x) {
+        if (evt.offsetX > this._position.x) {
           // console.debug("[granite-draw-sparkline] _onDraw", evt);
           this._context.beginPath();
           this._context.moveTo(this._position.x,this._position.y);
