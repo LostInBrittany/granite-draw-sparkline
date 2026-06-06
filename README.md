@@ -6,7 +6,8 @@
 
 ## Doc & demo
 
-[https://lostinbrittany.github.io/granite-draw-sparkline](https://lostinbrittany.github.io/granite-draw-sparkline)
+- Demo: [https://lostinbrittany.github.io/granite-draw-sparkline](https://lostinbrittany.github.io/granite-draw-sparkline)
+- Source: [https://github.com/LostInBrittany/granite-draw-sparkline](https://github.com/LostInBrittany/granite-draw-sparkline)
 
 ## Usage example
 
