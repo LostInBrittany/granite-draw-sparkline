@@ -1,0 +1,32 @@
+{
+  "name": "@granite-elements/granite-draw-sparkline",
+  "version": "2.0.0",
+  "description": "A web component to hand draw a sparkline on a canvas and get its coordinates",
+  "main": "granite-draw-sparkline.js",
+  "module": "granite-draw-sparkline.js",
+  "type": "module",
+  "files": [
+    "granite-draw-sparkline.js"
+  ],
+  "scripts": {
+    "start": "web-dev-server --open demo/ --node-resolve --watch"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.4.6"
+  },
+  "keywords": [
+    "web-component",
+    "web-components",
+    "custom-element",
+    "lostinbrittany",
+    "canvas",
+    "sparkline"
+  ],
+  "author": "Horacio Gonzalez <horacio.gonzalez@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LostInBrittany/granite-draw-sparkline.git"
+  },
+  "homepage": "https://github.com/LostInBrittany/granite-draw-sparkline"
+}

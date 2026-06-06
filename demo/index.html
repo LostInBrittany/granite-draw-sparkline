@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
 @license MIT
-Copyright (c) 2015 Horacio "LostInBrittany" Gonzalez
+Copyright (c) 2016 Horacio "LostInBrittany" Gonzalez
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -11,69 +11,61 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 -->
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
-    <title>granite-led demo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>granite-draw-sparkline demo</title>
 
-    <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+  <script type="module" src="../granite-draw-sparkline.js"></script>
 
-    <script>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 550px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    granite-draw-sparkline {
+      width: 100%;
+      height: 300px;
+      border: solid 1px grey;
+    }
+    pre {
+      white-space: pre-wrap;
+      word-break: break-all;
+      background: #f5f5f5;
+      padding: 0.5rem;
+      min-height: 3rem;
+    }
+  </style>
+</head>
 
-      // setup Polymer options
-      window.Polymer = {lazyRegister: true, dom: 'shadow'};
+<body>
+  <h1><code>granite-draw-sparkline</code></h1>
 
-      // load webcomponents polyfills
-      (function() {
-        if ('registerElement' in document
-            && 'import' in document.createElement('link')
-            && 'content' in document.createElement('template')) {
-          // browser has web components
-        } else {
-          // polyfill web components
-          var e = document.createElement('script');
-          e.src = '../webcomponentsjs/webcomponents-lite.min.js';
-          document.head.appendChild(e);
-        }
-      })();
+  <h3>Basic usage</h3>
+  <p>Draw inside the box with mouse, touch or pen. Each new stroke starts a new sparkline.</p>
 
+  <granite-draw-sparkline line-width="2" stroke-style="#1976d2"></granite-draw-sparkline>
 
-    </script>
-    <link   rel="import" href="../../polymer/polymer.html">
+  <p><button id="clear">Clear</button></p>
 
+  <h3>Path</h3>
+  <pre id="output">(draw something)</pre>
 
-    <link rel="import" href="../../paper-styles/color.html">
-    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-    <link rel="import" href="../../iron-icons/iron-icons.html">
-    
-    <link rel="import" href="../../granite-draw-sparkline/granite-draw-sparkline.html">
+  <script>
+    const sparkline = document.querySelector('granite-draw-sparkline');
+    const output = document.getElementById('output');
 
-    <style is="custom-style" include="demo-pages-shared-styles">
-      .spacer-10 { width:100%; height:10px; }
-      .spacer-50 { width:100%; height:50px; }
-      .vertical-section-container {
-        max-width: 550px;
-      }
-    </style>
-  </head>
+    sparkline.addEventListener('changed', (evt) => {
+      output.textContent = JSON.stringify(
+        evt.detail.map((point) => ({ x: Math.round(point.x), y: Math.round(point.y) }))
+      );
+    });
 
-  <body unresolved>
-    <div class="vertical-section-container centered">
-
-      <h3>Basic usage</h3>
-      <demo-snippet class="centered-demo">
-        <template>
-          <style>
-            granite-draw-sparkline {
-              width: 300px;
-              height: 300px;
-              border: solid 1px grey;
-            }
-          </style>
-          <granite-draw-sparkline line-width=2></granite-draw-sparkline>              
-        </template>
-      </demo-snippet>
-    </div>
-  </body> 
-</html>     
+    document.getElementById('clear').addEventListener('click', () => {
+      sparkline.clear();
+      output.textContent = '(draw something)';
+    });
+  </script>
+</body>
+</html>
